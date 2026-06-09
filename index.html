@@ -206,5 +206,28 @@
         </div>
       </div>
     </footer>
+    <!-- Botón flotante de WhatsApp -->
+    <a
+      href="https://wa.me/5491162345678?text=%C2%A1Hola!%20%F0%9F%91%8B%20Me%20gustar%C3%ADa%20pedir%20una%20pizza.%20%C2%BFCu%C3%A1l%20es%20el%20men%C3%BA%20disponible%20y%20hacen%20env%C3%ADos%20a%20domicilio%3F"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contactar por WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="whatsapp-tooltip">¡Chateá con nosotros!</span>
+    </a>
+    <script>
+async function loadProducts(){
+const response=await fetch("products.json"); // response guarda un Objeto
+const data=await response.json();            // data guarda el JSON leido
+console.log(data.productos[0].nombre);
+console.log(data.productos[0].precio);
+
+}
+
+document.addEventListener('DOMContentLoaded',loadProducts);
+
+    </script>
   </body>
 </html>
